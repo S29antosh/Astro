@@ -1,0 +1,215 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+	<div class="hero-section">
+		<div class="hero-section-left">
+		  <img
+			src="../img/profile.JPG"
+			alt="Profile Image"
+			class="profile-image"
+		  />
+		</div>
+		<div class="hero-section-right">
+		  <div class="intro">HI, I'm</div>
+		  <div class="intro_name">Santosh</div>
+		  <p class="intro_bio">
+			I'm a Web Developer, I love to create beautiful and functional
+			websites. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Officia, libero? Lorem ipsum dolor sit amet consectetur
+			adipisicing elit. Neque blanditiis sed aut!
+		  </p>
+		  <span id="element"></span>
+	
+		  <a href="#" class="cv">Download CV</a>
+		</div>
+	  </div>
+	  <div class="article_container">
+		<article>
+		  <section class="left">
+			<img src="./img/background.webp" alt="profile" />
+		  </section>
+		  <section class="right">
+			<h1>At Present</h1>
+			<p>
+			  Studing Bachelor in Computer Engineering at Kathmandu
+			  University. Kathmandu University (KU) (Nepali: काठमाण्डौ
+			  विश्वविद्यालय) is a public autonomous university in Nepal. It is
+			  the third oldest university in Nepal, located in Dhulikhel of
+			  Kavrepalanchok District, about 30 km (19 mi) east of Kathmandu.
+			  It was established in 1991 with the motto "Quality Education for
+			  Leadership."
+			</p>
+		  </section>
+		</article>
+	  </div>
+</Layout>
+
+
+<style>
+	.main {
+   
+   margin-bottom: 10px;
+}
+.hero-section {
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url('hero-bg.jpg');
+   background-size: cover;
+   background-position: center;
+   color: black;
+   min-height: 800px;
+   
+   
+}
+
+.hero-section-left {
+   width: 100vw;
+   text-align: center;
+   padding: 0 2em;
+}
+
+.hero-section-right {
+   width: 100vw;
+   text-align: center;
+   padding: 0 2em;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   color: var(--color-grey-1);
+   animation: right 1s ease;
+   
+}
+
+.profile-image {
+   width: 80%;
+   border-radius:5% 5% 100% 5%;
+   opacity: 0.7;
+   /* border-radius: 50%; */
+   margin-bottom: 4em;
+   
+   transition: all 0.6s ease-out;
+   border:solid white;
+   border-width: 0px 20px 0px 0px;
+   
+   transition: all 0.5s ease-in-out;
+   animation: left 1s ease-in-out;
+}
+@keyframes left{
+   0%{
+	   transform: translateX(-100px);
+	   opacity: 0;
+   }
+   100%{
+	   transform: translateX(0px);
+	   opacity: 0.7;
+   }
+}
+@keyframes right {
+   0%{
+	   transform: translateX(100px);
+	   opacity: 0;
+   }
+   100%{
+	   transform: translateX(0px);
+	   opacity: 1;
+   }
+   
+}
+
+
+
+.profile-image:hover {
+   transform: scale(1.1);
+   
+   border-color: #27AE60;
+   opacity: 0.6;
+   /* transform: scale(110%); */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+}
+
+
+.intro {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 40px;
+   font-weight: bolder;
+}
+
+.intro_name {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 40px;
+   font-weight: bolder;
+   color: var(--color-secondary)
+}
+
+.intro_bio {
+   max-width: 60ch;
+   margin: 0px auto;
+   
+}
+
+
+
+.cv {
+
+   padding: .5em 2em;
+   background-color: var(--color-secondary);
+   color: white;
+   text-decoration: none;
+   border-radius: 4px;
+   
+   margin: auto;
+   transition: all 0.5s ease-out;
+   
+   
+}
+
+.cv:hover {
+   color: #333;
+   
+}
+article {
+   display: flex;
+   flex-direction: row-reverse;
+}
+ article .left {
+	 width: 100vw;
+	 text-align: center;
+	 padding: 0 2em;
+   }
+   
+   article .right {
+   width: 100vw;
+   text-align: center;
+   padding: 0 2em;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   color: var(--color-grey-1);
+   justify-content: center;
+}
+article .right h1 {
+   color: green;
+   font-size: 2em;
+ }
+
+ article .left img {
+   /* max-width: 500px; */
+   width: 70%;
+   min-width: 200px;
+   border-radius: 4%;
+   opacity: 0.6;
+}
+</style>

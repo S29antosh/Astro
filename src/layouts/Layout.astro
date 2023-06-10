@@ -1,0 +1,48 @@
+---
+import "../Styles/global.css";
+import NavBar from "../components/navBar.astro"
+import Footer from "../components/Footer.astro"
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./img/AvatarMaker (1).svg"
+      type="image/x-icon"
+    />
+
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="header">
+      <NavBar/>
+      </div>
+
+	  <div class="main">
+		<slot/>
+	  </div>
+    <Footer />
+     
+
+      
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<h1>FullStack", "<h1>Web Developer", "<h1>Designer</h1>", "<h1>MERN Developer</h1>"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
